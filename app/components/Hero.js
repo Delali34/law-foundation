@@ -89,7 +89,7 @@ export default function Hero() {
               position: "relative",
             }}>
               <img
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=750&fit=crop&crop=faces"
+                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&dpr=1"
                 alt="Young student beneficiary smiling"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
