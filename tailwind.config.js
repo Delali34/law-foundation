@@ -8,8 +8,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        forest: "var(--forest)",
+        "forest-deep": "var(--forest-deep)",
+        cream: "var(--cream)",
+        "cream-warm": "var(--cream-warm)",
+        bone: "var(--bone)",
+        terracotta: "var(--terracotta)",
+        "terracotta-deep": "var(--terracotta-deep)",
+        ink: "var(--ink)",
+        "ink-muted": "var(--ink-muted)",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        display: ["var(--font-display)"],
+        serif: ["var(--font-serif)"],
       },
     },
   },
