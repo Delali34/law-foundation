@@ -46,7 +46,7 @@ export default function Hero() {
         }}>
           <div className="reveal" style={{ animationDelay: "0.1s" }}>
             <h1 className="display" style={{
-              fontSize: "clamp(56px, 9vw, 144px)",
+              fontSize: "clamp(42px, 6vw, 96px)",
               color: "var(--forest)",
               marginBottom: 32,
             }}>
@@ -81,11 +81,18 @@ export default function Hero() {
           </div>
 
           <div className="hero-right reveal" style={{ animationDelay: "0.25s" }}>
-            <div className="photo-ph" style={{
+            <div style={{
               aspectRatio: "4/5",
               borderRadius: 6,
               marginBottom: 16,
+              overflow: "hidden",
+              position: "relative",
             }}>
+              <img
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=750&fit=crop&crop=faces"
+                alt="Young student beneficiary smiling"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
               <div className="photo-tag">Photo · Beneficiary spotlight</div>
             </div>
             <p style={{

@@ -45,7 +45,7 @@ export default function Footer() {
           overflow: "hidden",
         }}>
           <div className="display" style={{
-            fontSize: "clamp(80px, 16vw, 240px)",
+            fontSize: "clamp(48px, 10vw, 140px)",
             lineHeight: 0.85,
             letterSpacing: "-0.04em",
             color: "var(--cream)",
