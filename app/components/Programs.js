@@ -8,8 +8,7 @@ const programs = [
     tag: "Scholarship",
     title: "LAW Scholarship Fund",
     body: "To support needy students with school supplies and financial aid to help them chase their dreams.",
-    audience: "For students in primary, secondary & tertiary education",
-    accent: "var(--terracotta)",
+    accent: "var(--red)",
   },
   {
     num: "02",
@@ -17,31 +16,28 @@ const programs = [
     title: "LAW Empowerment Support",
     sub: "(LES)",
     body: "Empowering SMEs through financial support to boost their businesses and drive growth.",
-    audience: "For small business owners & entrepreneurs",
-    accent: "var(--forest)",
+    accent: "var(--ink)",
   },
   {
     num: "03",
     tag: "Mentorship",
     title: "LAW Mentorship",
     body: "To provide guidance and mentorship for young people to help them stay focused and motivated.",
-    audience: "For young people seeking direction",
-    accent: "var(--terracotta)",
+    accent: "var(--red)",
   },
   {
     num: "04",
     tag: "Conference",
     title: "LAW Young Female Conference",
     body: "Flagship female conference for young people from 16 years and above.",
-    audience: "For young women, 16+",
-    accent: "var(--forest)",
+    accent: "var(--ink)",
     isFlagship: true,
   },
 ];
 
 function ProgramCard({ program, index }) {
   const [hover, setHover] = useState(false);
-  const dark = program.accent === "var(--forest)";
+  const dark = program.accent === "var(--ink)";
 
   return (
     <article
@@ -50,8 +46,8 @@ function ProgramCard({ program, index }) {
       onMouseLeave={() => setHover(false)}
       style={{
         transitionDelay: `${index * 60}ms`,
-        background: dark ? "var(--forest)" : "var(--cream)",
-        color: dark ? "var(--cream)" : "var(--forest)",
+        background: dark ? "var(--ink)" : "var(--white)",
+        color: dark ? "var(--white)" : "var(--ink)",
         borderRadius: 8,
         padding: "40px 36px",
         minHeight: 380,
@@ -60,9 +56,10 @@ function ProgramCard({ program, index }) {
         position: "relative",
         overflow: "hidden",
         cursor: "default",
+        border: dark ? "none" : "1px solid var(--line)",
         transform: hover ? "translateY(-4px)" : "translateY(0)",
         transition: "transform 0.4s cubic-bezier(.2,.7,.2,1), box-shadow 0.4s ease, opacity 0.9s, transform 0.9s",
-        boxShadow: hover ? "0 24px 48px -12px rgba(11,61,46,0.18)" : "0 0 0 rgba(0,0,0,0)",
+        boxShadow: hover ? "0 24px 48px -12px rgba(0,0,0,0.15)" : "0 0 0 rgba(0,0,0,0)",
       }}
     >
       {program.isFlagship && (
@@ -70,8 +67,8 @@ function ProgramCard({ program, index }) {
           position: "absolute",
           top: 24,
           right: 24,
-          background: "var(--terracotta)",
-          color: "var(--cream)",
+          background: "var(--red)",
+          color: "var(--white)",
           padding: "4px 10px",
           borderRadius: 999,
           fontSize: 10,
@@ -92,8 +89,8 @@ function ProgramCard({ program, index }) {
         <span className="serif italic" style={{
           fontSize: 56,
           fontWeight: 400,
-          color: program.accent,
-          opacity: dark ? 0.95 : 0.85,
+          color: "var(--red)",
+          opacity: 0.85,
           lineHeight: 1,
         }}>
           {program.num}
@@ -102,7 +99,7 @@ function ProgramCard({ program, index }) {
           fontSize: 11,
           letterSpacing: "0.18em",
           textTransform: "uppercase",
-          color: dark ? "rgba(245,241,232,0.7)" : "var(--terracotta)",
+          color: dark ? "rgba(255,255,255,0.6)" : "var(--red)",
           fontWeight: 500,
         }}>
           {program.tag}
@@ -113,7 +110,7 @@ function ProgramCard({ program, index }) {
         fontSize: 36,
         lineHeight: 1.05,
         marginBottom: 16,
-        color: dark ? "var(--cream)" : "var(--forest)",
+        color: dark ? "var(--white)" : "var(--ink)",
       }}>
         {program.title}
         {program.sub && (
@@ -131,7 +128,7 @@ function ProgramCard({ program, index }) {
       <p style={{
         fontSize: 16,
         lineHeight: 1.55,
-        color: dark ? "rgba(245,241,232,0.78)" : "var(--ink-muted)",
+        color: dark ? "rgba(255,255,255,0.75)" : "var(--ink-muted)",
         marginBottom: 24,
         maxWidth: 440,
       }}>
@@ -141,41 +138,31 @@ function ProgramCard({ program, index }) {
       <div style={{
         marginTop: "auto",
         paddingTop: 24,
-        borderTop: dark ? "1px solid rgba(245,241,232,0.18)" : "1px solid var(--line)",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        gap: 12,
+        borderTop: dark ? "1px solid rgba(255,255,255,0.15)" : "1px solid var(--line)",
       }}>
         <span style={{
-          fontSize: 13,
-          color: dark ? "rgba(245,241,232,0.65)" : "var(--ink-muted)",
-        }}>
-          {program.audience}
-        </span>
-        <a href="#cta" style={{
           display: "inline-flex",
           alignItems: "center",
           gap: 8,
           fontSize: 13,
           fontWeight: 500,
-          color: dark ? "var(--cream)" : "var(--forest)",
+          color: dark ? "var(--white)" : "var(--ink)",
           letterSpacing: "-0.01em",
-          opacity: hover ? 1 : 0.85,
+          opacity: hover ? 1 : 0.7,
           transition: "opacity 0.2s, transform 0.3s",
           transform: hover ? "translateX(2px)" : "translateX(0)",
         }}>
-          Apply or refer
+          Learn more
           <span style={{
             display: "inline-flex",
             width: 26, height: 26,
             borderRadius: 999,
-            background: program.accent,
-            color: "var(--cream)",
+            background: "var(--red)",
+            color: "var(--white)",
             alignItems: "center", justifyContent: "center",
             fontSize: 12,
           }}>→</span>
-        </a>
+        </span>
       </div>
     </article>
   );
@@ -185,7 +172,7 @@ export default function Programs() {
   return (
     <section id="programs" style={{
       padding: "120px 0 140px",
-      background: "var(--bone)",
+      background: "var(--light-gray)",
       position: "relative",
       overflow: "hidden",
     }}>
@@ -201,11 +188,11 @@ export default function Programs() {
             <span className="eyebrow">Our Programs</span>
             <h2 className="display" style={{
               fontSize: "clamp(44px, 6vw, 92px)",
-              color: "var(--forest)",
+              color: "var(--ink)",
               marginTop: 24,
             }}>
               Four ways we{" "}
-              <span className="serif italic" style={{ color: "var(--terracotta)" }}>show up</span>.
+              <span className="serif italic" style={{ color: "var(--red)" }}>show up</span>.
             </h2>
           </div>
           <div style={{ paddingBottom: 12 }}>
