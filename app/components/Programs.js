@@ -135,35 +135,6 @@ function ProgramCard({ program, index }) {
         {program.body}
       </p>
 
-      <div style={{
-        marginTop: "auto",
-        paddingTop: 24,
-        borderTop: dark ? "1px solid rgba(255,255,255,0.15)" : "1px solid var(--line)",
-      }}>
-        <span style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 8,
-          fontSize: 13,
-          fontWeight: 500,
-          color: dark ? "var(--white)" : "var(--ink)",
-          letterSpacing: "-0.01em",
-          opacity: hover ? 1 : 0.7,
-          transition: "opacity 0.2s, transform 0.3s",
-          transform: hover ? "translateX(2px)" : "translateX(0)",
-        }}>
-          Learn more
-          <span style={{
-            display: "inline-flex",
-            width: 26, height: 26,
-            borderRadius: 999,
-            background: "var(--red)",
-            color: "var(--white)",
-            alignItems: "center", justifyContent: "center",
-            fontSize: 12,
-          }}>→</span>
-        </span>
-      </div>
     </article>
   );
 }
