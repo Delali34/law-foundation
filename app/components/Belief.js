@@ -1,15 +1,15 @@
 export default function Belief() {
   return (
-    <section id="belief" className="in-view" style={{
+    <section id="about" className="in-view" style={{
       padding: "140px 0",
-      background: "var(--forest)",
-      color: "var(--cream)",
+      background: "var(--ink)",
+      color: "var(--white)",
       position: "relative",
       overflow: "hidden",
     }}>
       <div aria-hidden="true" style={{
         position: "absolute", inset: 0,
-        background: "radial-gradient(ellipse at top right, rgba(217,119,66,0.15), transparent 60%)",
+        background: "radial-gradient(ellipse at top right, rgba(196,30,42,0.15), transparent 60%)",
         pointerEvents: "none",
       }} />
 
@@ -21,8 +21,8 @@ export default function Belief() {
           alignItems: "start",
         }}>
           <div>
-            <span className="eyebrow" style={{ color: "var(--terracotta)" }}>
-              Our Belief
+            <span className="eyebrow" style={{ color: "var(--red)" }}>
+              About Us
             </span>
             <p style={{
               marginTop: 32,
@@ -43,14 +43,14 @@ export default function Belief() {
               lineHeight: 1.04,
               marginBottom: 0,
             }}>
-              <span style={{ color: "var(--cream)" }}>Economic</span><br />
-              <span style={{ color: "var(--cream)" }}>empowerment</span><br />
-              <span style={{ color: "var(--cream)", opacity: 0.4 }}>and</span>{" "}
-              <span className="serif italic" style={{ color: "var(--terracotta)" }}>education</span>{" "}
-              <span style={{ color: "var(--cream)" }}>can</span><br />
-              <span style={{ color: "var(--cream)" }}>change</span>{" "}
-              <span className="serif italic" style={{ color: "var(--cream)" }}>lives</span>
-              <span style={{ color: "var(--terracotta)" }}>.</span>
+              <span style={{ color: "var(--white)" }}>Economic</span><br />
+              <span style={{ color: "var(--white)" }}>empowerment</span><br />
+              <span style={{ color: "var(--white)", opacity: 0.4 }}>and</span>{" "}
+              <span className="serif italic" style={{ color: "var(--red)" }}>education</span>{" "}
+              <span style={{ color: "var(--white)" }}>can</span><br />
+              <span style={{ color: "var(--white)" }}>change</span>{" "}
+              <span className="serif italic" style={{ color: "var(--white)" }}>lives</span>
+              <span style={{ color: "var(--red)" }}>.</span>
             </h2>
           </div>
         </div>

@@ -5,7 +5,7 @@ export default function Hero() {
       minHeight: "100vh",
       paddingTop: 140,
       paddingBottom: 80,
-      background: "var(--cream)",
+      background: "var(--white)",
       overflow: "hidden",
     }}>
       <div aria-hidden="true" style={{
@@ -15,7 +15,7 @@ export default function Hero() {
         width: 620,
         height: 620,
         borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(217,119,66,0.18) 0%, transparent 65%)",
+        background: "radial-gradient(circle, rgba(196,30,42,0.1) 0%, transparent 65%)",
         pointerEvents: "none",
       }} />
 
@@ -34,7 +34,7 @@ export default function Hero() {
             color: "var(--ink-muted)",
             fontVariantNumeric: "tabular-nums",
           }}>
-            Est. for impact &nbsp;·&nbsp; Education × Economic Empowerment
+            Education × Economic Empowerment
           </span>
         </div>
 
@@ -47,15 +47,15 @@ export default function Hero() {
           <div className="reveal" style={{ animationDelay: "0.1s" }}>
             <h1 className="display" style={{
               fontSize: "clamp(42px, 6vw, 96px)",
-              color: "var(--forest)",
+              color: "var(--ink)",
               marginBottom: 32,
             }}>
               Empowering<br />
               through{" "}
-              <span className="serif italic" style={{ color: "var(--terracotta)" }}>
+              <span className="serif italic" style={{ color: "var(--red)" }}>
                 education
               </span>
-              <span style={{ color: "var(--terracotta)" }}>.</span>
+              <span style={{ color: "var(--red)" }}>.</span>
             </h1>
 
             <p style={{
@@ -70,12 +70,12 @@ export default function Hero() {
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a href="#cta" className="btn btn-primary">
-                Donate to a student
+              <a href="#about" className="btn btn-primary">
+                Learn more about us
                 <span>→</span>
               </a>
-              <a href="#programs" className="btn btn-ghost">
-                Explore our programs
+              <a href="#founder" className="btn btn-ghost">
+                Meet the founder
               </a>
             </div>
           </div>
@@ -90,10 +90,9 @@ export default function Hero() {
             }}>
               <img
                 src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&dpr=1"
-                alt="Young student beneficiary smiling"
+                alt="Young student beneficiary"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
-              <div className="photo-tag">Photo · Beneficiary spotlight</div>
             </div>
             <p style={{
               fontSize: 13,
@@ -103,7 +102,7 @@ export default function Hero() {
               maxWidth: 320,
             }}>
               &ldquo;A society where opportunities and education is accessible to all.&rdquo;
-              <span style={{ display: "block", marginTop: 6, fontStyle: "normal", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--forest)" }}>
+              <span style={{ display: "block", marginTop: 6, fontStyle: "normal", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink)" }}>
                 — Our Vision
               </span>
             </p>
@@ -123,8 +122,8 @@ export default function Hero() {
           flexWrap: "wrap",
         }}>
           <span>↓ &nbsp; Scroll to learn what drives us</span>
-          <span style={{ fontFamily: "var(--display)", fontSize: 16, color: "var(--forest)", fontStyle: "italic" }}>
-            Four programs · One mission
+          <span style={{ fontFamily: "var(--display)", fontSize: 16, color: "var(--ink)", fontStyle: "italic" }}>
+            Empowering through education
           </span>
         </div>
       </div>

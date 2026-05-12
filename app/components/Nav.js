@@ -6,7 +6,7 @@ const Logo = () => (
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
     <circle cx="16" cy="16" r="15" stroke="currentColor" strokeWidth="1.5" />
     <path d="M10 10 L10 22 L18 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    <circle cx="22" cy="11" r="2.5" fill="var(--terracotta)" />
+    <circle cx="22" cy="11" r="2.5" fill="var(--red)" />
   </svg>
 );
 
@@ -20,10 +20,9 @@ export default function Nav() {
   }, []);
 
   const links = [
-    { label: "About", href: "#belief" },
-    { label: "Programs", href: "#programs" },
-    { label: "Impact", href: "#impact" },
-    { label: "Get involved", href: "#cta" },
+    { label: "About", href: "#about" },
+    { label: "Founder", href: "#founder" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
@@ -32,7 +31,7 @@ export default function Nav() {
       top: 0, left: 0, right: 0,
       zIndex: 50,
       padding: scrolled ? "14px 0" : "24px 0",
-      background: scrolled ? "rgba(245, 241, 232, 0.85)" : "transparent",
+      background: scrolled ? "rgba(255, 255, 255, 0.9)" : "transparent",
       backdropFilter: scrolled ? "blur(12px)" : "none",
       borderBottom: scrolled ? "1px solid var(--line)" : "1px solid transparent",
       transition: "all 0.3s ease",
@@ -51,7 +50,7 @@ export default function Nav() {
           fontSize: 22,
           fontWeight: 500,
           letterSpacing: "-0.02em",
-          color: "var(--forest)",
+          color: "var(--ink)",
         }}>
           <Logo />
           <span>LAW Foundation</span>
@@ -66,7 +65,7 @@ export default function Nav() {
             <a key={l.href} href={l.href} style={{
               fontSize: 14,
               fontWeight: 500,
-              color: "var(--forest)",
+              color: "var(--ink)",
               opacity: 0.8,
               transition: "opacity 0.2s",
             }}>
@@ -75,8 +74,8 @@ export default function Nav() {
           ))}
         </div>
 
-        <a href="#cta" className="btn btn-dark" style={{ padding: "10px 20px", fontSize: 14 }}>
-          Donate
+        <a href="#contact" className="btn btn-primary" style={{ padding: "10px 20px", fontSize: 14 }}>
+          Get in touch
           <span style={{ fontSize: 12 }}>→</span>
         </a>
       </div>

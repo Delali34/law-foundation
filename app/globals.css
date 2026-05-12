@@ -3,16 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --forest: #0B3D2E;
-  --forest-deep: #082A20;
-  --cream: #F5F1E8;
-  --cream-warm: #EFE8D6;
-  --bone: #E8DFC9;
-  --terracotta: #D97742;
-  --terracotta-deep: #B85A2A;
+  --red: #C41E2A;
+  --red-deep: #9B1520;
+  --white: #FFFFFF;
+  --off-white: #F8F8F8;
+  --light-gray: #F0F0F0;
   --ink: #1A1A1A;
-  --ink-muted: #4A4A4A;
-  --line: rgba(11, 61, 46, 0.14);
+  --ink-muted: #555555;
+  --line: rgba(0, 0, 0, 0.1);
 
   --serif: "Instrument Serif", Georgia, serif;
   --display: "Fraunces", "Instrument Serif", Georgia, serif;
@@ -27,7 +25,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--sans);
-  background: var(--cream);
+  background: var(--white);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -35,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-::selection { background: var(--terracotta); color: var(--cream); }
+::selection { background: var(--red); color: var(--white); }
 
 a { color: inherit; text-decoration: none; }
 
@@ -75,23 +73,23 @@ button {
 .btn:hover { transform: translateY(-1px); }
 
 .btn-primary {
-  background: var(--terracotta);
-  color: var(--cream);
+  background: var(--red);
+  color: var(--white);
 }
-.btn-primary:hover { background: var(--terracotta-deep); }
+.btn-primary:hover { background: var(--red-deep); }
 
 .btn-dark {
-  background: var(--forest);
-  color: var(--cream);
+  background: var(--ink);
+  color: var(--white);
 }
-.btn-dark:hover { background: var(--forest-deep); }
+.btn-dark:hover { background: #333; }
 
 .btn-ghost {
   background: transparent;
-  color: var(--forest);
+  color: var(--ink);
   border: 1px solid var(--line);
 }
-.btn-ghost:hover { background: var(--bone); }
+.btn-ghost:hover { background: var(--light-gray); }
 
 .eyebrow {
   font-family: var(--sans);
@@ -99,7 +97,7 @@ button {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--terracotta);
+  color: var(--red);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -108,7 +106,7 @@ button {
   content: "";
   width: 24px;
   height: 1px;
-  background: var(--terracotta);
+  background: var(--red);
 }
 
 .display {
@@ -142,41 +140,4 @@ button {
 .in-view.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.photo-ph {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #6b4f2a 0%, #8a6a3e 35%, #c9a061 65%, #e8c08a 100%);
-}
-.photo-ph::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 30%, rgba(255,230,180,0.4), transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(60,30,10,0.5), transparent 60%);
-}
-.photo-ph::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(45deg, rgba(0,0,0,0.04) 0 2px, transparent 2px 4px);
-  mix-blend-mode: multiply;
-}
-
-.photo-tag {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: rgba(11,61,46,0.85);
-  color: var(--cream);
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
-  z-index: 2;
 }

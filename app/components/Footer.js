@@ -1,58 +1,26 @@
-function FooterCol({ title, links }) {
-  return (
-    <div>
-      <h4 style={{
-        fontSize: 11,
-        letterSpacing: "0.18em",
-        textTransform: "uppercase",
-        color: "var(--terracotta)",
-        marginBottom: 16,
-        fontWeight: 500,
-      }}>
-        {title}
-      </h4>
-      <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
-        {links.map(l => (
-          <li key={l}>
-            <a href="#" style={{
-              fontSize: 14,
-              color: "var(--cream)",
-              opacity: 0.78,
-              transition: "opacity 0.2s",
-            }}>
-              {l}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 export default function Footer() {
   return (
-    <footer style={{
-      background: "var(--forest-deep)",
-      color: "var(--cream)",
+    <footer id="contact" style={{
+      background: "var(--ink)",
+      color: "var(--white)",
       paddingTop: 64,
       paddingBottom: 32,
-      borderTop: "1px solid rgba(245,241,232,0.08)",
     }}>
       <div className="container">
         <div style={{
           paddingBottom: 48,
-          borderBottom: "1px solid rgba(245,241,232,0.12)",
+          borderBottom: "1px solid rgba(255,255,255,0.12)",
           overflow: "hidden",
         }}>
           <div className="display" style={{
             fontSize: "clamp(48px, 10vw, 140px)",
             lineHeight: 0.85,
             letterSpacing: "-0.04em",
-            color: "var(--cream)",
+            color: "var(--white)",
             whiteSpace: "nowrap",
           }}>
             LAW{" "}
-            <span className="serif italic" style={{ color: "var(--terracotta)", fontStyle: "italic" }}>
+            <span className="serif italic" style={{ color: "var(--red)", fontStyle: "italic" }}>
               foundation
             </span>
           </div>
@@ -60,7 +28,7 @@ export default function Footer() {
 
         <div className="footer-bottom" style={{
           display: "grid",
-          gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1.4fr 1fr 1fr",
           gap: 40,
           marginTop: 48,
         }}>
@@ -85,35 +53,77 @@ export default function Footer() {
             </p>
           </div>
 
-          <FooterCol title="Programs" links={[
-            "Scholarship Fund", "Empowerment (LES)", "Mentorship", "Young Female Conference",
-          ]} />
-          <FooterCol title="Get Involved" links={[
-            "Donate", "Volunteer", "Apply", "Partner with us",
-          ]} />
-          <FooterCol title="Contact" links={[
-            "hello@lawfoundation.org", "Press inquiries", "Newsletter", "Annual report",
-          ]} />
+          <div>
+            <h4 style={{
+              fontSize: 11,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "var(--red)",
+              marginBottom: 16,
+              fontWeight: 500,
+            }}>
+              Quick Links
+            </h4>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
+              {["About", "Objective", "Mission", "Vision", "The Founder"].map(l => (
+                <li key={l}>
+                  <a href={l === "The Founder" ? "#founder" : "#about"} style={{
+                    fontSize: 14,
+                    color: "var(--white)",
+                    opacity: 0.78,
+                    transition: "opacity 0.2s",
+                  }}>
+                    {l}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 style={{
+              fontSize: 11,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "var(--red)",
+              marginBottom: 16,
+              fontWeight: 500,
+            }}>
+              Contact
+            </h4>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
+              {["hello@lawfoundation.org", "Press inquiries"].map(l => (
+                <li key={l}>
+                  <a href="#" style={{
+                    fontSize: 14,
+                    color: "var(--white)",
+                    opacity: 0.78,
+                    transition: "opacity 0.2s",
+                  }}>
+                    {l}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div style={{
           marginTop: 56,
           paddingTop: 24,
-          borderTop: "1px solid rgba(245,241,232,0.12)",
+          borderTop: "1px solid rgba(255,255,255,0.12)",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
           gap: 16,
           fontSize: 12,
-          color: "rgba(245,241,232,0.55)",
+          color: "rgba(255,255,255,0.55)",
         }}>
           <span>© {new Date().getFullYear()} LAW Foundation. Empowering through education.</span>
           <span style={{ display: "flex", gap: 20 }}>
             <a href="#" style={{ opacity: 0.7 }}>Privacy</a>
             <a href="#" style={{ opacity: 0.7 }}>Terms</a>
-            <a href="#" style={{ opacity: 0.7 }}>Instagram</a>
-            <a href="#" style={{ opacity: 0.7 }}>LinkedIn</a>
           </span>
         </div>
       </div>

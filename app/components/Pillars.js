@@ -2,7 +2,7 @@ export default function Pillars() {
   const items = [
     {
       label: "Objective",
-      body: "To provide economic opportunities and educational support to needy individuals, enabling them to reach their full potential and contribute positively to society.",
+      body: "To provide economic opportunities and educational support to needy individuals, enabling them to reach their full potential and contribute positively.",
       glyph: "01",
     },
     {
@@ -20,7 +20,7 @@ export default function Pillars() {
   return (
     <section style={{
       padding: "140px 0 100px",
-      background: "var(--cream)",
+      background: "var(--white)",
     }}>
       <div className="container">
         <div className="in-view" style={{
@@ -30,12 +30,12 @@ export default function Pillars() {
           <span className="eyebrow">What guides us</span>
           <h2 className="display" style={{
             fontSize: "clamp(40px, 5.4vw, 76px)",
-            color: "var(--forest)",
+            color: "var(--ink)",
             marginTop: 24,
           }}>
             Three statements,<br />
             one cycle of{" "}
-            <span className="serif italic" style={{ color: "var(--terracotta)" }}>kindness</span>.
+            <span className="serif italic" style={{ color: "var(--red)" }}>kindness</span>.
           </h2>
         </div>
 
@@ -47,7 +47,7 @@ export default function Pillars() {
           {items.map((item, i) => (
             <article key={item.label} className="in-view" style={{
               transitionDelay: `${i * 80}ms`,
-              background: "var(--cream-warm)",
+              background: "var(--off-white)",
               borderRadius: 8,
               padding: "40px 32px 36px",
               position: "relative",
@@ -68,14 +68,14 @@ export default function Pillars() {
                   fontWeight: 500,
                   textTransform: "uppercase",
                   letterSpacing: "0.18em",
-                  color: "var(--terracotta)",
+                  color: "var(--red)",
                 }}>
                   {item.label}
                 </span>
                 <span className="serif italic" style={{
                   fontSize: 28,
-                  color: "var(--forest)",
-                  opacity: 0.4,
+                  color: "var(--ink)",
+                  opacity: 0.2,
                 }}>
                   {item.glyph}
                 </span>
@@ -85,7 +85,7 @@ export default function Pillars() {
                 fontFamily: "var(--display)",
                 fontSize: 22,
                 lineHeight: 1.35,
-                color: "var(--forest)",
+                color: "var(--ink)",
                 letterSpacing: "-0.01em",
                 fontWeight: 400,
                 marginTop: "auto",
