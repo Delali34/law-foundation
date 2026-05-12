@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const Logo = () => (
-  <img src="/logo.png" alt="LAW Foundation logo" style={{ width: 44, height: 48 }} />
+  <img src="/logo.png" alt="LAW Foundation logo" style={{ width: 60, height: 65 }} />
 );
 
 export default function Nav() {
