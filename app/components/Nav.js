@@ -50,7 +50,6 @@ export default function Nav() {
           color: "var(--ink)",
         }}>
           <Logo />
-          <span>LAW Foundation</span>
         </a>
 
         <div className="nav-links" style={{
