@@ -4,6 +4,20 @@ export const metadata = {
   title: "LAW Foundation — Empowering Through Education",
   description:
     "Economic empowerment and education can change lives. We're driven by passion and a desire to make a difference.",
+  openGraph: {
+    title: "LAW Foundation — Empowering Through Education",
+    description:
+      "Economic empowerment and education can change lives. We're driven by passion and a desire to make a difference.",
+    images: [{ url: "/og-image.jpg", width: 1024, height: 1024 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LAW Foundation — Empowering Through Education",
+    description:
+      "Economic empowerment and education can change lives. We're driven by passion and a desire to make a difference.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {
