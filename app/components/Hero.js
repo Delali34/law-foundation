@@ -89,8 +89,8 @@ export default function Hero() {
               position: "relative",
             }}>
               <img
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&dpr=1"
-                alt="Young student beneficiary"
+                src="/hero.jpg"
+                alt="LAW Foundation community event"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>
