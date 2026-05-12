@@ -3,11 +3,7 @@
 import { useState, useEffect } from "react";
 
 const Logo = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-    <circle cx="16" cy="16" r="15" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M10 10 L10 22 L18 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    <circle cx="22" cy="11" r="2.5" fill="var(--red)" />
-  </svg>
+  <img src="/logo.svg" alt="LAW Foundation logo" style={{ width: 40, height: 44 }} />
 );
 
 export default function Nav() {
