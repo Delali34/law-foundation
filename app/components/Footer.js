@@ -92,7 +92,7 @@ export default function Footer() {
               Contact
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
-              {["hello@lawfoundation.org", "Press inquiries"].map(l => (
+              {["info@thelawfoundationgh.com"].map(l => (
                 <li key={l}>
                   <a href="#" style={{
                     fontSize: 14,
@@ -123,7 +123,6 @@ export default function Footer() {
           <span>© {new Date().getFullYear()} LAW Foundation. Empowering through education.</span>
           <span style={{ display: "flex", gap: 20 }}>
             <a href="#" style={{ opacity: 0.7 }}>Privacy</a>
-            <a href="#" style={{ opacity: 0.7 }}>Terms</a>
           </span>
         </div>
       </div>
